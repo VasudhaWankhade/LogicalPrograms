@@ -1,19 +1,21 @@
-function checkPrime(num) {
-    if (num != 1 && num != 0) {
-        for (let i = 2; i < num; i++) {
-            if (num % i == 0) {
-                console.log("Not prime")
-                break
-            } else {
-                console.log("Prime")
-                break
-            }
+function prime(n) {
+    let c = 0
+    for (let i = 2; i < n; i++) {
+        if (n % i == 0) {
+            c = 1
+            break
         }
-    } else {
-        let a = num == 0 ? `${num} is not prime number` : `${num} is not prime nor composite number`
-        console.log(a)
     }
+    if (c == 1) {
+        // console.log('NO')
+        return false
+    } else {
+        // console.log('Yes')
+        return true
+    }
+
 
 }
 
-// checkPrime(0)
+let a = prime(356587)
+console.log(a)
